@@ -8,14 +8,16 @@
 
 !src
 !src/CMakeLists.txt
-!src/linker_script.ld
-!src/startup.c
+!src/STM32F401RETX_FLASH.ld
+!src/startup_stm32f401xe.s
 !src/main.c
 
 !src/peripherals
 !src/peripherals/CMakeLists.txt
 !src/peripherals/max7219_led_matrix.c
+!src/peripherals/sysclk.c
 
 !include
 !include/peripherals
 !include/peripherals/max7219_led_matrix.h
+!include/peripherals/sysclk.h

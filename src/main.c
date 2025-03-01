@@ -15,12 +15,20 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  **/
 
+#include "peripherals/sysclk.h"
 #include "peripherals/max7219_led_matrix.h"
 
-#define WAIT() for (volatile int i = 0; i < 100000; i++)
+#define BITMAP_LEVEL_0 (uint64_t)(0x00)
+#define BITMAP_LEVEL_1 (uint64_t)(0x0000001818000000)
+#define BITMAP_LEVEL_2 (uint64_t)(0x00003C3C3C3C0000)
+#define BITMAP_LEVEL_3 (uint64_t)(0x007E7E7E7E7E7E00)
+#define BITMAP_LEVEL_4 (uint64_t)(0xFFFFFFFFFFFFFFFF)
+
+#define WAIT() for (volatile int i = 0; i < 1000000; i++)
 
 void main(void) {
 
+  sysclk_init();
   max7219_lm_init();
 
   void (*led_fun)(uint8_t, uint8_t) = &max7219_lm_set_led;

@@ -1,5 +1,6 @@
 add_library(max7219_led_matrix STATIC
     max7219_led_matrix.c
+    sysclk.c
     ${PROJECT_SOURCE_DIR}/vendor/STM32F4_HAL_LL/Src/stm32f4xx_ll_gpio.c
     ${PROJECT_SOURCE_DIR}/vendor/STM32F4_HAL_LL/Src/stm32f4xx_ll_spi.c
     ${PROJECT_SOURCE_DIR}/vendor/STM32F4_HAL_LL/Src/stm32f4xx_ll_rcc.c

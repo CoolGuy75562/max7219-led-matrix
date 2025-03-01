@@ -120,7 +120,7 @@ void max7219_lm_init(void) {
       .ClockPhase = LL_SPI_PHASE_1EDGE,
       .NSS = LL_SPI_NSS_SOFT,
       .BaudRate =
-          LL_SPI_BAUDRATEPRESCALER_DIV32, /* Must be < 10MHz, should finetune this */
+      LL_SPI_BAUDRATEPRESCALER_DIV16,
       .BitOrder = LL_SPI_MSB_FIRST,
       .CRCCalculation = LL_SPI_CRCCALCULATION_DISABLE,
       .CRCPoly = 0x00};
